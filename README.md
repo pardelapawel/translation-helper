@@ -1,4 +1,4 @@
-# What is it?
+# What is it? :sparkles:
 
 2 scripts that might help with translation of syllabus.
 
