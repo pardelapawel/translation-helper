@@ -4,6 +4,7 @@ import os.path as path
 from lxml import etree
 from io import StringIO, BytesIO
 import json
+from always_replace import smart_replace
 
 argumentparser = argparse.ArgumentParser(description="""
         """)
@@ -27,7 +28,7 @@ trans_dict = json.load(codecs.open(options.mapping_file, 'r', 'utf-8'))
 page = etree.parse(StringIO(codecs.open(options.html_to_modify, 'r', 'utf-8').read()), htmlparser)
 
 for entry_num, (key, value) in enumerate(trans_dict.items()):
-    page.xpath(key)[0].text = value
+    page.xpath(key)[0].text = smart_replace(key, value)
 
 print("Modified {} entries".format(entry_num))
 
