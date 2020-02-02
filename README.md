@@ -38,6 +38,14 @@ Translation mapping was saved to 'syllabus_page.json'
 ...
 ```
 
+### For KNOU use `knou2json.py`
+
+```bash
+python3 knou2json.py incase2020/page.html
+```
+
+Produces a json that's compatible with the `apply_mapping.py` script
+
 
 ## Correct translation _(manual work)_
 
