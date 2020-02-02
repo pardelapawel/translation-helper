@@ -62,3 +62,11 @@ Saved modified page to 'syllabus_page.prepared.modified.html'
 ```
 
 please find the modified html file with the `modified html` extension in the same directory as the input file
+
+### Repetitive replacements
+
+If there are repetitive replacements to be done, one may consider using the `always_replace.py` module.
+
+The funciton takes a `key` which is an `xpath` and a value. Based on both (or either) the functino decides what to return.
+
+For example, it can always return a constant value for a given path, or always replace _One_ with _1_ if it's the only text in value.
