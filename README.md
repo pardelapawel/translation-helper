@@ -69,7 +69,7 @@ If one wants to run the above in a loop (for all the files) one might consider:
 ### Batch json applying
 
 ```bash
-for file in done/*.prepared.html; do name=$(basename $file | cut -d'.' -f1); echo "[$name]"; yesno="y"; while [[ $yesno =~ "^y" ]] ; do echo $yesno; python3 apply_mapping.py done/$name.prepared.html done/$name.json -o confirmed/$name.html || break && chromium confirmed/$name.html; python3 apply_mapping.py done/$name.prepared.html done/$name.json -o confirmed/$name.html; read "yesno?regenerate $name again(y/n) "; done; echo ;done
+for file in done/*.prepared.html; do name=$(basename $file | cut -d'.' -f1); echo "[$name]"; yesno="y"; while [[ $yesno =~ "^y" ]] ; do echo $yesno; python3 apply_mapping.py done/$name.prepared.html done/$name.json || break && chromium confirmed/$name.html; python3 apply_mapping.py done/$name.prepared.html done/$name.json; read "yesno?regenerate $name again(y/n) "; done; echo ;done
 ```
 
 It works on my Ubuntu18.04 with zsh
