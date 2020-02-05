@@ -63,6 +63,23 @@ Saved modified page to 'syllabus_page.prepared.modified.html'
 
 please find the modified html file with the `modified html` extension in the same directory as the input file
 
+If one wants to run the above in a loop (for all the files) one might consider:
+
+
+### Batch json applying
+
+```bash
+for file in done/*.prepared.html; do name=$(basename $file | cut -d'.' -f1); echo "[$name]"; yesno="y"; while [[ $yesno =~ "^y" ]] ; do echo $yesno; python3 apply_mapping.py done/$name.prepared.html done/$name.json -o confirmed/$name.html || break && chromium confirmed/$name.html; python3 apply_mapping.py done/$name.prepared.html done/$name.json -o confirmed/$name.html; read "yesno?regenerate $name again(y/n) "; done; echo ;done
+```
+
+It works on my Ubuntu18.04 with zsh
+
+#### Expected compatibility issues
+- zsh vs bash
+  - `read "var?question"` command should be changed `read -p "question" var`
+- browser: I use `chromum`
+  - if one uses a different browser, one might consider changing it to their preferred browser
+
 ### Repetitive replacements
 
 If there are repetitive replacements to be done, one may consider using the `always_replace.py` module.
