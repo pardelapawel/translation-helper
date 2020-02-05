@@ -36,7 +36,11 @@ trans_dict = json.load(codecs.open(options.mapping_file, 'r', 'utf-8'))
 page = etree.parse(StringIO(codecs.open(options.html_to_modify, 'r', 'utf-8').read()), htmlparser)
 
 for entry_num, (key, value) in enumerate(trans_dict.items()):
-    page.xpath(key)[0].text = smart_replace(key, value)
+    elem_to_replace = page.xpath(key)
+    if elem_to_replace:
+        elem_to_replace[0].text = smart_replace(key, value)
+    else:
+        raise ValueError("Key '{}' is empty in html. in JSON the value was: '{}'. Make sure the key is correct (typos)".format(key, value))
 
 for pre in page.xpath("//pre"):
     assert("style" not in pre.attrib), "style was found in attrib. I would overwrite it. please report"
