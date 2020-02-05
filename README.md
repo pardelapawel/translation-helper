@@ -71,7 +71,7 @@ If one wants to run the above in a loop (for all the files) one might consider:
 ```bash
 dirpath=done
 browser=chromium
-for file in $dirpath/*.prepared.html; do name=$(basename $file | cut -d'.' -f1); echo "[$name]"; yesno="y"; while [[ $yesno =~ "^y" ]] ; do python3 apply_mapping.py $dirpath/$name.prepared.html $dirpath/$name.json || break && $browser $dirpath/$name.prepared.modified.html; python3 apply_mapping.py $dirpath/$name.prepared.html $dirpath/$name.json; read "yesno?regenerate '$name' again(y to regenerate) "; done; echo ;done
+for file in $dirpath/*.prepared.html; do name=$dirpath/$(basename $file | cut -d'.' -f1); echo "[$name]"; yesno="y"; while [[ $yesno =~ "^y" ]] ; do python3 apply_mapping.py $name.prepared.html $name.json || break && $browser $name.prepared.modified.html; python3 apply_mapping.py $name.prepared.html $name.json; read "yesno?regenerate '$name' again(y to regenerate) "; done; echo ;done
 ```
 
 It works on my Ubuntu18.04 with zsh
