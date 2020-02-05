@@ -12,10 +12,10 @@ def smart_replace(key, value):
         return ""
 
     end_of_doc = {
-        "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[2]/font/font": "A healthy society / safe society created by data scientists",
-        "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[3]/font/font": "Textbooks 2.3 to 2.4",
-        "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[4]/font/font": "44-55",
-        "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[5]/font/font": "lecture",
+        #"/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[2]/font/font": "A healthy society / safe society created by data scientists",
+        #"/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[3]/font/font": "Textbooks 2.3 to 2.4",
+        #"/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[4]/font/font": "44-55",
+        #"/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[5]/font/font": "lecture",
         "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[6]/td[2]": "\ub370\uc774\ud130 \uad6c\uc870\uc640 \uc800\uc7a5",
         "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[6]/td[3]": "\uad50\uc7ac 3.1 ~ 3.2",
         "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[6]/td[4]": "61-83",
