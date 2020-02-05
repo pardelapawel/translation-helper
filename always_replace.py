@@ -1,7 +1,7 @@
 import re
 
 def smart_replace(key, value):
-    if re.match("one", value.strip(), re.IGNORECASE):
+    if re.match("^one$", value.strip(), re.IGNORECASE):
         return "1"
 
     gtanslate_footer = ["Google Translate",
