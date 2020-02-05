@@ -38,6 +38,10 @@ page = etree.parse(StringIO(codecs.open(options.html_to_modify, 'r', 'utf-8').re
 for entry_num, (key, value) in enumerate(trans_dict.items()):
     page.xpath(key)[0].text = smart_replace(key, value)
 
+for pre in page.xpath("//pre"):
+    assert("style" not in pre.attrib), "style was found in attrib. I would overwrite it. please report"
+    pre.attrib["style"] = "white-space: pre-wrap; white-space: -moz-pre-wrap;  white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"
+
 print("Modified {} entries".format(entry_num))
 
 modified_page = etree.tostring(page, pretty_print=True).decode('utf-8')
