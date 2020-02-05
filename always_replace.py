@@ -4,6 +4,13 @@ def smart_replace(key, value):
     if re.match("one", value.strip(), re.IGNORECASE):
         return "1"
 
+    gtanslate_footer = ["Google Translate",
+        "Original text",
+        "Contribute a better translation",
+        "Drop here!"]
+    if value.strip() in gtanslate_footer:
+        return ""
+
     end_of_doc = {
         "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[2]/font/font": "A healthy society / safe society created by data scientists",
         "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[3]/font/font": "Textbooks 2.3 to 2.4",
