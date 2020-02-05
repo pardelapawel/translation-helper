@@ -50,14 +50,23 @@ def smart_replace(key, value):
         "/html/body/div[2]/div/div[2]/div[2]/table[2]/tbody/tr/td": "\uc870\ud68c\ub41c \uc2dc\ud5d8\uc77c\uc815\uc774 \uc5c6\uc2b5\ub2c8\ub2e4.",
         "/html/body/div[5]/div[2]/h1": "Original text",
         "/html/body/div[5]/div[4]/div[1]/span[1]": "Contribute a better translation",
-        "/html/body/div[6]/div/div[2]": "Drop here!"
+        "/html/body/div[6]/div/div[2]": "Drop here!",
+
     }
 
     if key in end_of_doc:
         print("replacing '{}' with '{}'".format(value, end_of_doc[key]))
         return end_of_doc[key]
 
-    return {
-        "/html/body/form/table[2]/tbody/tr[3]/td[3]/font/font": "Grades",
-        "/html/body/form/table[2]/tbody/tr[3]/td[3]/font/font": "Credits",
-        }.get(key, value)
+    replace_by_value_dict = {
+        "Grades": "Credits",
+        "English lesson plan information": "",
+        "Syllabus in English": "Summary",
+        }
+
+    if value.strip() in replace_by_value_dict:
+        print("REPLACING BY VALUE!!! '{}' -> '{}'".format(value, replace_by_value_dict[value.strip()]))
+        return replace_by_value_dict[value.strip()]
+
+
+    return value # return what we got as the last resort (so we don't return empty)
