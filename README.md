@@ -89,3 +89,26 @@ If there are repetitive replacements to be done, one may consider using the `alw
 The funciton takes a `key` which is an `xpath` and a value. Based on both (or either) the functino decides what to return.
 
 For example, it can always return a constant value for a given path, or always replace _One_ with _1_ if it's the only text in value.
+
+
+## Editing on iPad
+
+In order to make it easier to edit `json` files on a mobile device, `txt` files were generated (with a semi-reversable method.
+
+In order to check the _reversability_ one can run:
+
+```bash
+vimdiff $file.json <(paste -d':' <( jq 'keys_unsorted[]' $file.json) <(jq '.[]' $file.json) | sed -e 's/$/,/' -e '$s/,//' | sed -e '1 i\{' -e '$a\}' | jq '.')
+```
+
+which means this was run to generate `txt` files:
+
+```bash
+jq '.[]' $file.json > $file.txt
+```
+
+and the reverse of the above (after modifying the `txt` file) is:
+
+```bash
+paste -d':' <( jq 'keys_unsorted[]' $file.json) $file.txt | sed -e 's/$/,/' -e '$s/,//' | sed -e '1 i\{' -e '$a\}' | jq '.'
+```
