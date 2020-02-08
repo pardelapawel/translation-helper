@@ -1,0 +1,45 @@
+name: Upload txt to github pages
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.5
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.5
+    - name: Install python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run script
+      run: |
+        OUTPUT_DIR=undone/generated
+        mkdir $OUTPUT_DIR
+        for file in contart eastasia medivalthought natlsec SocSoc; do paste -d':' <(jq 'keys_unsorted[]' undone/$file.json) undone/iPad/$file.txt | sed -e 's/$/,/' -e '$s/,//' | sed -e '1 i\{' -e '$a\}' | jq '.' > $OUTPUT_DIR/$file.json; done
+        for file in ds101; do paste -d':' <(jq 'keys_unsorted[]' undone/knou/$file.json) undone/knou/iPad/$file.txt | sed -e 's/$/,/' -e '$s/,//' | sed -e '1 i\{' -e '$a\}' | jq '.' > $OUTPUT_DIR/$file.json ; done
+
+        for file in contart eastasia medivalthought natlsec SocSoc; do python apply_mapping.py undone/$file.prepared.html $OUTPUT_DIR/$file.json -o $OUTPUT_DIR/$file.html; done
+        for file in ds101; do python apply_mapping.py undone/knou/$file.html $OUTPUT_DIR/$file.json -o $OUTPUT_DIR/$file; done
+
+        echo '[contart](contart.html) [eastasia](eastasia.html) [medivalthought](medivalthought.html) [natlsec](natlsec.html) [SocSoc](SocSoc.html) [ds101](ds101.html)' > $OUTPUT_DIR/README.md
+
+    - name: Build the site in the jekyll/builder container
+      run: |
+        ls -r
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --trace"
+
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: undone/generated
