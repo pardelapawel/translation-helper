@@ -15,7 +15,7 @@
 "S108 "
 "landisplay(_time)"
 "Lecture time"
-"Number 5,6 "
+"Wed 5,6 "
 "landisplay(_prof)"
 "Professor in charge"
 "Hyewon Choi "
