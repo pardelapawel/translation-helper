@@ -134,10 +134,5 @@
     "/html/body/div[2]/div/div[2]/div[2]/table[2]/thead/tr/th[1]": "\uc9c0\uc5ed\ub300\ud559",
     "/html/body/div[2]/div/div[2]/div[2]/table[2]/thead/tr/th[2]": "\uc2dc\ud5d8\uc77c\uc815",
     "/html/body/div[2]/div/div[2]/div[2]/table[2]/thead/tr/th[3]": "\uc7a5\uc18c",
-    "/html/body/div[2]/div/div[2]/div[2]/table[2]/tbody/tr/td": "\uc870\ud68c\ub41c \uc2dc\ud5d8\uc77c\uc815\uc774 \uc5c6\uc2b5\ub2c8\ub2e4.",
-    "/html/body/div[3]/center/a[1]/font/font": "Print",
-    "/html/body/div[3]/center/a[2]/font/font": "close",
-    "/html/body/div[5]/div[2]/h1": "Original text",
-    "/html/body/div[5]/div[4]/div[1]/span[1]": "Contribute a better translation",
-    "/html/body/div[6]/div/div[2]": "Drop here!"
+    "/html/body/div[2]/div/div[2]/div[2]/table[2]/tbody/tr/td": "\uc870\ud68c\ub41c \uc2dc\ud5d8\uc77c\uc815\uc774 \uc5c6\uc2b5\ub2c8\ub2e4."
 }
