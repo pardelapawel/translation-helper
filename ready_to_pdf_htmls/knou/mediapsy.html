@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0158)https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=6&year=2019&hakgi=2&hakgwacd=26&gmcd=26474&gsgrade=4&tabno=1&gaeyoFlag=1&epTicket=INV -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    	       
+        <title>Korea National Open University-Learning information</title> 
+        <link href="./mediapsy_files/table.css" rel="stylesheet" type="text/css" />
+        <link href="./mediapsy_files/content.css" rel="stylesheet" type="text/css" />
+        
+        <!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="/css/css_ie6.css" />
+        <![endif]-->
+        
+    	<script language="javascript">        
+       function initTabMenu(tabContainerID,tabClassName,tabNum) {
+           var tabContainer = document.getElementById(tabContainerID);
+           var tabAnchor = tabContainer.getElementsByTagName("a");
+           var i = 0, tabAnchorIdx = 0;
+
+           for (i = 0; i &lt; tabAnchor.length; i++) {
+               if (tabAnchor.item(i).className == tabClassName)
+                   thismenu = tabAnchor.item(i);
+               else
+                   continue;
+
+               tabAnchorIdx = tabAnchorIdx + 1;
+               thismenu.container = tabContainer;
+               thismenu.targetEl = document.getElementById(tabAnchor.item(i).href.split("#")[1]);
+               thismenu.targetEl.style.display = "none";
+               thismenu.imgEl = thismenu.getElementsByTagName("img").item(0);
+
+               thismenu.onclick = function tabMenuClick() {
+                   currentmenu = this.container.current;
+                   if (currentmenu == this){
+                       return false;
+         			}
+                   if (currentmenu) {
+                       currentmenu.targetEl.style.display = "none";
+                       if (currentmenu.imgEl) {
+                           currentmenu.imgEl.src = currentmenu.imgEl.src.replace("_o.gif", ".gif");
+                           currentmenu.className = currentmenu.className.replace("_over", "");
+                       } else {
+                           currentmenu.className = currentmenu.className.replace("_over", "");
+                       }
+                   }
+                   this.targetEl.style.display = "block";
+                   if (this.imgEl) {
+                       this.imgEl.src = this.imgEl.src.replace(".gif", "_o.gif");
+                       this.className += "_over";
+                   } else {
+                       this.className += "_over";
+                   }
+                   this.container.current = this;
+
+                   return false;
+               };
+
+         if (tabNum == 0){}
+         
+         else if (tabNum != null &amp;&amp; tabAnchorIdx == tabNum)
+          thismenu.container.first = thismenu;
+         else if (!thismenu.container.first)
+          thismenu.container.first = thismenu;
+           }
+
+           if (tabContainer.first)
+               tabContainer.first.onclick();
+       }
+       
+       /**
+        * Time &#49828;&#53944;&#47553;&#51012; &#51088;&#48148;&#49828;&#53356;&#47549;&#53944; Date &#44061;&#52404;&#47196; &#48320;&#54872;
+        * parameter time: Time &#54805;&#49885;&#51032; String
+        */
+       function toTimeObject(time) { //parseTime(time)
+           var year  = time.substr(0,4);
+           var month = time.substr(4,2) - 1; // 1&#50900;=0,12&#50900;=11
+           var day   = time.substr(6,2);
+           var hour  = time.substr(8,2);
+           var min   = time.substr(10,2);
+           return new Date(year,month,day,hour,min);
+       }
+
+       /**
+        * &#53945;&#51221;&#45216;&#51676; &#47924;&#49832; &#50836;&#51068;&#51060;&#50556;?
+        */
+       function getDayOfWeek(strtime) {
+           var now = toTimeObject(strtime);
+           var day = now.getDay(); //&#51068;&#50836;&#51068;=0,&#50900;&#50836;&#51068;=1,...,&#53664;&#50836;&#51068;=6
+           var week = new Array('&#51068;','&#50900;','&#54868;','&#49688;','&#47785;','&#44552;','&#53664;');
+           return week[day];
+       }
+
+       function profUrl(url) {
+         window.open(url);
+       }
+
+       function closeOut() {
+         this.close() ;
+       }
+       /*
+        * &#44060;&#50836;&#48372;&#44592;
+        */
+       function listSubjectIntro() {
+         var ff = document.subjectIntroForm;
+         ff.gaeyoFlag.value="1";
+         ff.method="post";
+         ff.action="/common/HCDSubjectIntrolistMoLecPlan.do";
+         ff.submit();
+       }
+
+       /*
+        * &#44053;&#51032;&#44228;&#54925;&#49436; &#48372;&#44592;
+        */
+       function listMoLecPlan() {
+         var ff = document.subjectIntroForm;
+         ff.gaeyoFlag.value="2";
+         ff.method="post";
+         ff.action="/common/HCDSubjectIntro.do";
+         ff.submit();
+       }        
+
+       /** &#49884;&#54744;&#51068;&#51221;&#51312;&#54924; */ 
+       function fn_examSclSerach(lesnExamDc){
+    	var ff = document.subjectInfoForm;
+        ff.tabno.value="2";
+   		ff.lesnExamDc.value=lesnExamDc;
+   		ff.method="post";
+        ff.action="/common/HCDSubjectIntrolistMoLecPlan.do";
+        ff.submit();  		
+   	}	
+
+    function fn_resize(){
+    	//this.scrollbars = "auto";
+        window.resizeTo(810,1000);
+        
+    }
+    </script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="./mediapsy_files/translateelement.css" /></head>
+    <!-- &#49324;&#50857;&#54624; &#48320;&#49688; &#47785;&#47197;  --> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		 
+	
+	
+	
+	
+	    <!-- media &#51333;&#47448; setup -->
+	    
+	        
+	        
+	    
+	    
+	    
+	    
+	    
+	
+	
+	
+	
+	
+	    <!-- media &#51333;&#47448; setup -->
+	    <!-- &#44053;&#51032;&#44396;&#48516; setup -->
+	    
+	    
+	        
+	    
+	    
+	    
+	    <!-- &#44053;&#51032;&#44396;&#48516; setup -->
+	    <!-- &#49884;&#54744;&#53440;&#51077; setup -->
+	    
+	        
+	    
+	    
+	    
+	    <!-- &#49884;&#54744;&#53440;&#51077; setup -->
+	    <!-- &#44284;&#47785;&#44396;&#48516; setup -->
+	    
+	    
+	    
+	        
+	    
+	    
+	    
+	    <!-- &#44284;&#47785;&#44396;&#48516; setup -->
+	
+		
+    <body onload="javascript:fn_resize();" style="overflow:auto; overflow-x:hidden">
+        <!-- contents -->
+        <div id="detailpop" class="detailpopup">
+	        <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Course Information-Understanding of Media Psychology</font></font></h1>
+	    </div>
+        <div id="contents">
+            <div class="subContent">
+                <div id="tab" style="width:100%">
+                    <ul class="tab_lst" style="width:100%">
+                        <li><a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=6&amp;year=2019&amp;hakgi=2&amp;hakgwacd=26&amp;gmcd=26474&amp;gsgrade=4&amp;tabno=1&amp;gaeyoFlag=1&amp;epTicket=INV#tab_cert01" class="tabbtn_over"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Subject Outline</font></font></span></a></li>
+                        <li><a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=6&amp;year=2019&amp;hakgi=2&amp;hakgwacd=26&amp;gmcd=26474&amp;gsgrade=4&amp;tabno=1&amp;gaeyoFlag=1&amp;epTicket=INV#tab_cert02" class="tabbtn"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Test Information</font></font></span></a></li>
+                    </ul>
+                </div>
+                
+                <div id="tab">    
+                    <!-- tab_cert01 -->
+                    <div id="tab_cert01" style="display: block;">
+                        <h4 id="tab_cert01_01" class="tit_02">
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">summary</font></font></strong>
+                        </h4>
+                        <p class="txt_box02"> 
+                            <span class="bottom">&#160;</span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Understanding Media Psychology deals extensively with the impact of media and media content on people's psychology.</font><font style="vertical-align: inherit;">I hope this lecture will help you understand how media and human psychology interact and influence each other.</font><font style="vertical-align: inherit;">Based on this, I hope to broaden the overall understanding of the media and human beings.</font></font></p>
+                        
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Medium name</font></font></h5>
+	                        <ul class="lst_depth1">
+	                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TV lecture</font></font></li>
+	                        </ul>
+	                        <br />
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Broadcast schedule</font></font></h5>
+	                        
+	                        <ul class="lst_depth1">
+	                            <li>
+		                            
+		                            
+		                        </li>
+		                        <li>
+		                            
+		                        </li>
+		                        
+	                            
+	                        </ul>
+	                        <br />
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">lecture content</font></font></h5>
+	                        <ul class="lst_depth1">
+	                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TV lecture</font></font></li>
+	                        </ul>
+	                        <!-- &#44053;&#51032;&#44032; 2/4/5 &#47732; -->
+	                        
+	                        <!-- &#44053;&#51032;&#44032; 2/4/5 &#47732; &#45149;-->
+	                        
+	                        <!-- &#44053;&#51032;&#44032; 2/4/5 &#44032; &#50500;&#45768;&#47732; -->
+	                        
+	                            <table class="tbeForm" summary="&#50724;&#46356;&#50724; &#44053;&#51032;&#50640; &#44288;&#54620; &#51221;&#48372;&#51077;&#45768;&#45796;.">
+		                            <caption></caption>
+		                            <colgroup>
+		                                <col width="30" />
+		                                <col width="100" />
+		                                <col width="165" />
+		                                <col width="200" />
+		                                <col width="60" />
+		                                <col width="50" />
+		                            </colgroup>
+		                            <thead>
+		                                <tr>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Count</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Broadcast date</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecture Topic</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The details</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Textbook Pages</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Professor in charge</font></font></th>
+		                                </tr>
+		                            </thead>
+		                            <tbody>
+		                                
+		                                
+		                                
+		                                    
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/08/17 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Introduction to Media Psychology</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Examine the psychological process of processing media information</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Explore the nature of media stimuli affecting the psychological processing of media</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Learn why people choose certain media stimuli</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/08/24 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Methodology of Media Psychology</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Introduce research methods that are mainly used in media effects research.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679;</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Examine the strengths</font><font style="vertical-align: inherit;">and weaknesses of experimental studies and experimental design</font><font style="vertical-align: inherit;">methods with a case study</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/08/31 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Type of media effect</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition and type of effects of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">media &#9679; Comparison of various types of effects caused by media &#9679;</font><font style="vertical-align: inherit;">Presentation</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">of historical changes in</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">media effects research &#9679; Study of the relationship between media effects research and media policy</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/09/07 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Media and violence</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">media violence &#9679; Comparison of theories on the effects of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">media violence &#9679; Criticism of false beliefs related to media violence</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/09/14 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Media addiction</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Understanding of addiction in games and smartphones</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Discussing causes and solutions of addiction</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/09/21 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Media and sexual expression</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Understanding the types of sexual expressions in the media</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Identifying the standards and judgments of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pornography</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; The</font><font style="vertical-align: inherit;">effects of pornography on sexual values, attitudes and behaviors</font><font style="vertical-align: inherit;">&#9679; Relationship between pornography and sex crimes</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/09/28 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Positive media effects</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; What are the positive effects of the media?</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Understand the relationship between media and prosocial behaviour.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Explain why positive effects occur.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; How to use media positively.</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/10/05 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">News and Reality Awareness</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Understand the function of media and types of news.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Focus on the theory of framing about how news forms the social agenda.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Relevant theories about how news affects people's perceptions.</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/10/12 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Advertising effect</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition and function of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">advertising &#9679; Definition and type of advertising effect</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Reason and process of advertising effect</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Understanding of various advertising theories and models</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/10/19 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Media entertainment</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; In addition to the impact of individual moods on selective exposure of media, how do people manage their moods through the selective use of media?</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; The meaning of empathy and the enjoyment of drama.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679;</font><font style="vertical-align: inherit;">The enjoyment of</font><font style="vertical-align: inherit;">tragedy and sports programs.</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/10/26 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Internet psychology</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Characteristics of Internet Communication</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition and Cause of Cyber &#8203;&#8203;Violence</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition and Function of Online Communities</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Major Issues Related to the Internet Public</font><font style="vertical-align: inherit;">Forum</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/11/02 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Social Media and Relationship Psychology</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition and Status of Social Media and SNS</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Relationship between Social Media and Psychology</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Psychological Principles of Social Media Use</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Psychological Phenomena in</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Social Media &#9679; Issues of Recent Issues Related to Social Media</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/11/09 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mobile media</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; The changes that mobile media has made to individuals, societies and industries.</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Motivation and fulfillment of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mobile media. &#9679; The meaning and current status of addictions related to mobile media.</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/11/16 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Psychology of the Game</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">game &#9679; Classification of game by platform and genre</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Motivation of</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">game &#9679; Relationship between game addiction and aggressiveness</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+				                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></td>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016/11/23 (Wed)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">New Media (eBook, Augmented Reality, 3D)</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Features of eBook</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Definition and Features of Augmented Reality</font></font><br /><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#9679; Motivation of Use of 3D Technology</font></font></td>
+				                                    <td></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ok Tae Kim</font></font></td>
+				                                </tr>
+			                                
+		                                
+		                            
+		                            </tbody>
+		                        </table>
+	                        
+	                        <!-- &#44053;&#51032;&#44032; 2/4/5 &#44032; &#50500;&#45768;&#47732; -->
+	                        <br />
+	                        
+                            
+                            
+                            
+                                  
+                            
+                            
+                            
+	                        <ul class="lst_depth1">
+	                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Attendance class</font></font></li>
+	                        </ul>
+	                        
+		                        <table class="tbeForm" summary="&#52636;&#49437;&#49688;&#50629;&#50640; &#44288;&#54620; &#51221;&#48372;&#51077;&#45768;&#45796;.">
+		                            <caption></caption>
+		                            <colgroup>
+		                                <col width="25" />
+		                                <col width="120" />
+		                                <col width="245" />
+		                                <col width="60" />
+		                                <col width="50" />
+		                            </colgroup>
+		                            <thead>
+		                                <tr>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">division</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecture Topic</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The details</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Textbook Pages</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecture</font></font></th>
+		                                </tr>
+		                            </thead>
+		                            <tbody>
+		                                <tr>
+		                                    
+		                                </tr>
+		                                
+		                                
+		                                    <tr>
+			                                    <td scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></td>
+			                                    <td scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Instructor Discretion</font></font></td>
+			                                    <td scope="col">&#160;</td>
+			                                    <td scope="col"></td>
+			                                    <td scope="col">
+			                                        
+			                                        
+			                                    </td>
+			                                </tr>
+		                                
+		                                
+		                            </tbody>
+		                        </table>
+		                    
+	                        <br />
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluation method and question range</font></font></h5>
+	                        <table class="tbeForm" summary="&#52636;&#49437;&#49688;&#50629;&#50640; &#44288;&#54620; &#51221;&#48372;&#51077;&#45768;&#45796;.">
+	                            <caption></caption>
+	                            <colgroup>
+	                                <col width="80" />
+	                                <col width="80" />
+	                                <col width="245" />
+	                                <col width="200" />
+	                            </colgroup>
+	                            <thead>
+	                                <tr>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluation Type</font></font></th>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Assessment Methods</font></font></th>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Scope of question</font></font></th>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remarks</font></font></th>
+	                                </tr>
+	                            </thead>
+	                            <tbody>
+	                                <tr>
+	                                      
+		                            </tr>
+                                    
+                                        
+		                                    <tr>
+			                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Attendance class</font></font></td>
+			                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Assignment Type</font></font></td>
+			                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Instructor Discretion</font></font></td>
+			                                    <td>
+			                                        &#160;&#160;
+			                                    </td>
+		                                    </tr>
+	                                      
+                                    	                                
+	                            </tbody>
+	                        </table>
+	                        <br />
+	                        <p class="txt_important noGap"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Note: The above information is subject to change, so please refer to the academic bulletin.</font></font></b></p>
+                            <br />
+                            
+                            <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">references</font></font></h5>
+                            <ul class="lst_depth1">
+                                
+                                 
+                                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Signature: Understanding of Media Psychology / Author: Ok-tae Kim, Hong-sik Yoo, Yong-guk Jung / Publisher: KNOU / Year of publication: 2015</font></font><br /></li>                                        
+                                
+	                        </ul>
+	                   
+                    </div>
+                    <!-- //tab_cert01 --> 
+                    <!-- tab_cert02 : &#49884;&#54744;&#51221;&#48372;&#45716; &#50668;&#44592;&#50640; &#53076;&#46377; -->
+                    <div id="tab_cert02" style="display: none;">    
+                        <ul class="lst_depth1">
+                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Press O of Test Schedule to see the detailed test schedule.</font></font></li>
+                        </ul>                	
+                    	<table class="tbeForm" summary="&#49884;&#54744;&#49892;&#49884;&#50668;&#48512;">
+				            <caption></caption>
+				            <colgroup>
+				                <col width="" />
+				                <col width="" />
+				                <col width="" />            
+				            </colgroup>
+				            <thead>
+				            	 <tr>
+				            		<th rowspan="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">subject</font></font></th>
+				            		<th colspan="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exam Schedule</font></font></th>
+				            	</tr>
+				                <tr>
+				                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">how</font></font></th>
+				                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">middle</font></font></th>
+				                    <th scope="col" class="last"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Final</font></font></th>
+				                </tr>
+				            </thead>
+				            <tbody>            
+				                <tr align="center">
+				                	<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Understanding of Media Psychology</font></font></td>
+				                    <td><a href="javascript:fn_examSclSerach('02');"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">X</font></font></a></td>
+				                    <td><a href="javascript:fn_examSclSerach('04');"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">X</font></font></a></td>
+				                    <td><a href="javascript:fn_examSclSerach('06');"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">X</font></font></a></td>
+				                </tr>
+				            </tbody>
+				        </table>
+				        <h4 id="tab_cert02_01" class="tit_02">
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exam Schedule-</font></font></strong> 
+                        </h4>  
+                    	<table class="tbeForm" summary="&#49884;&#54744;&#51068;&#51221;&#54364;">
+                    		<caption><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exam Schedule</font></font></caption>
+                    		<colgroup>
+				                <col width="33%" />
+				                <col width="34%" />
+				                <col width="33%" />            
+				            </colgroup>
+				            <thead>
+				                <tr>
+				                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Community college</font></font></th>
+				                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exam Schedule</font></font></th>
+				                    <th scope="col" class="last"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Place</font></font></th>
+				                </tr>
+				            </thead>
+				            <tbody>           
+				            
+				                
+				                
+					                <tr>
+					                    <td colspan="3" align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">There are no test schedules.</font></font></td>
+					                </tr>
+				                
+				                            
+				            </tbody>
+                    	</table>                    
+                    </div>
+                </div>
+                <!-- //tab_cert02 --> 
+                
+            </div>
+            <br />
+        </div>
+        <div class="btn_m">
+               <center>
+	    	    <a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=6&amp;year=2019&amp;hakgi=2&amp;hakgwacd=26&amp;gmcd=26474&amp;gsgrade=4&amp;tabno=1&amp;gaeyoFlag=1&amp;epTicket=INV#" class="btn_gry" onclick="javascript:window.print();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Print </font></font></a>
+	    	    <a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=6&amp;year=2019&amp;hakgi=2&amp;hakgwacd=26&amp;gmcd=26474&amp;gsgrade=4&amp;tabno=1&amp;gaeyoFlag=1&amp;epTicket=INV#" onclick="self.close();" class="btn_gry"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">close</font></font></a>
+	    	</center>    
+	    </div>
+        <form name="subjectIntroForm" id="subjectIntroForm">
+		    <input type="hidden" name="year" value="2019" />
+		    <input type="hidden" name="hakgi" value="2" />
+		    <input type="hidden" name="hakgwacd" value="26" />		    
+		    <input type="hidden" name="gmcd" value="26474" />
+		    <input type="hidden" name="gsgrade" value="" />
+		    <input type="hidden" name="tabno" value="1" />
+		    <input type="hidden" name="gaeyoFlag" value="1" />
+		    <input type="hidden" name="css_type" value="6" />
+		    <input type="hidden" name="media" value="3" />
+		    <input type="hidden" id="lesnExamDc" name="lesnExamDc" class="textbox" value="" />		    
+		</form>
+		
+		<form name="subjectInfoForm" id="subjectInfoForm">
+		    <input type="hidden" name="year" value="2019" />
+		    <input type="hidden" name="hakgi" value="2" />		    		    
+		    <input type="hidden" name="gmcd" value="26474" />
+		    <input type="hidden" name="hakgwacd" value="26" />		    
+		    <input type="hidden" name="tabno" value="1" />		    
+		    <input type="hidden" name="css_type" value="6" />
+		    <input type="hidden" id="lesnExamDc" name="lesnExamDc" class="textbox" value="" />		    
+		</form>
+		
+    
+    <script type="text/javascript">
+        initTabMenu("tab","tabbtn",'1');
+    </script> 
+</body></html>
