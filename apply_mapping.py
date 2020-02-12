@@ -21,6 +21,10 @@ argumentparser.add_argument(
         "--output_file",
         help="output file. if not given, 'modified' is added to the input file to create outputfile",
         type=str)
+argumentparser.add_argument(
+        "--add_colour",
+        help="Adds css and title image to Yonsei uni htmls (don't use it on knou, it will fail)",
+        action='store_true')
 
 options = argumentparser.parse_args()
 htmlparser = etree.HTMLParser()
@@ -45,6 +49,13 @@ for entry_num, (key, value) in enumerate(trans_dict.items()):
 for pre in page.xpath("//pre"):
     assert("style" not in pre.attrib), "style was found in attrib. I would overwrite it. please report"
     pre.attrib["style"] = "white-space: pre-wrap; white-space: -moz-pre-wrap;  white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"
+
+if options.add_colour:
+    #this is to set the correct path to the logo image for every page
+    page.xpath("/html/body/form/table[2]/tbody/tr[1]/td/img")[0].attrib["src"] = "http://ysweb.yonsei.ac.kr:8888/images/syllabus_logo.jpg"
+
+    #this sets the proper path to the proper css - proper colouring of tables
+    page.xpath("/html/head/link[2]")[0].attrib["href"] = "http://ysweb.yonsei.ac.kr:8888/css/style.css"
 
 print("Modified {} entries".format(entry_num))
 

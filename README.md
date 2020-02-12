@@ -112,3 +112,24 @@ and the reverse of the above (after modifying the `txt` file) is:
 ```bash
 paste -d':' <( jq 'keys_unsorted[]' $file.json) $file.txt | sed -e 's/$/,/' -e '$s/,//' | sed -e '1 i\{' -e '$a\}' | jq '.'
 ```
+
+## Generating pdfs from htmls
+
+After applying all `json`s to original `html`s we are left with modified `html`s in `ready_to_pdf_htmls` directory.
+
+### Converting every html to pdf
+
+```bash
+pip3 install --user weasyprint
+mkdir pdf
+for filepath in ready_to_pdf_htmls/*.html; do file=$(basename $filepath | cut -f1 -d'.'); 2>&1 weasyprint $filepath pdf/$file.pdf; done
+```
+
+### Collapsing all `pdf`s into one
+
+Order of files on command line reflects the order in the output file
+
+```bash
+cd pdf
+pdfunite philethics.pdf cprog.pdf ds.pdf la.pdf stat.pdf db.pdf ds101_fine.pdf mediapsy.pdf modernthought.pdf bible.pdf chinese.pdf CommFren.pdf compconst.pdf EuroSocCul.pdf French1.pdf french2.pdf frenchart.pdf FutureEurope.pdf German1.pdf GlobaInterRel.pdf IntroEco.pdf IntroWestHistory.pdf ItalianHistory.pdf lifesci.pdf micro.pdf ModernEuroArt.pdf movies.pdf music.pdf NewEur.pdf Pol101.pdf RussianClub.pdf SocSoc.pdf swim.pdf uni.pdf WesternCulture.pdf writing.pdf syllabus.all.pdf
+```
