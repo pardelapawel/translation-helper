@@ -12,6 +12,15 @@ pip3 install -r requirements.txt
 
 # How to use
 
+## Simple generation with Makefile
+
+The below command will create the full syllabus
+
+```
+make clean all
+```
+
+
 ## Prepare mapping with `preprocess_page.py`
 This script creates 2 files:
 - an html without markers (name is based on the input file)
