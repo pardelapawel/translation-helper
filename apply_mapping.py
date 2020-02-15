@@ -39,6 +39,7 @@ trans_dict = json.load(codecs.open(options.mapping_file, 'r', 'utf-8'))
 
 page = etree.parse(StringIO(codecs.open(options.html_to_modify, 'r', 'utf-8', 'ignore').read()), htmlparser)
 
+entry_num = 0
 for entry_num, (key, value) in enumerate(trans_dict.items()):
     elem_to_replace = page.xpath(key)
     if elem_to_replace:
