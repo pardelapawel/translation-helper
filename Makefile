@@ -68,7 +68,7 @@ Makefile.svg: Makefile
 	$(MAKE) -nd all | makefile2graph | perl -ne 'BEGIN{@nodes}if(/(n\d+).*"(pdf|dummy|ready_to_pdf_htmls)"/){push @nodes, $$1;$$regex=join "|", @nodes}print unless(@nodes and /($$regex)\b/)' | dot -Tsvg -Granksep=2 -o $@
 
 index.html:
-	echo '# Graph\n[Makefile.svg](Makefile.svg)\n#Links\n' | markdown > $@
+	echo '# Syllabus\n[PDF is here](syllabus.all.pdf)\n# Graph\n[Makefile.svg](Makefile.svg)\n#Links\n' | markdown > $@
 	echo $(ALL_HTMLS_READY) | tr ' ' '\n' | perl -ne 'chomp;print "[`$$_`]($$_)  \n"' | markdown >> $@
 	echo $(ALL_HTMLS_READY) | tr ' ' '\n' | perl -ne 'chomp;print "# `$$_`\n <iframe width=\"100%\" height=\"100%\" src=\"./$$_\"></iframe>\n"' | markdown >>$@
 
