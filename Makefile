@@ -90,4 +90,4 @@ python_dependencies:
 	sudo python3 -m pip install weasyprint
 
 pdf_dependencies:
-	sudo apt-get install poppler-utils
+	sudo apt-get install poppler-utils graphviz markdown
