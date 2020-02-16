@@ -10,9 +10,15 @@ only html parser:
 pip3 install -r requirements.txt
 ```
 
+The below command will instlal all dependencies required for this makefile to work
+```
+make install_dependencies
+```
+
 # How to use
 
 ## Simple generation with Makefile
+
 
 The below command will create the full syllabus
 
@@ -20,6 +26,12 @@ The below command will create the full syllabus
 make clean all
 ```
 
+This command creates an svg graph showing which files were used to generate the syllabus
+```
+make clean graph
+```
+
+# Detailed usage (without makefile)
 
 ## Prepare mapping with `preprocess_page.py`
 This script creates 2 files:

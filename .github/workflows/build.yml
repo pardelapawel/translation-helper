@@ -18,7 +18,8 @@ jobs:
           make install_dependencies
     - name: Run script
       run: |
-          make clean graph ready index.html all
+          make clean graph ready index.html
+          make clean all
     - name: Build the site in the jekyll/builder container
       run: |
         ls -r
