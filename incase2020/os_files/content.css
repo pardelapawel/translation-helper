@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(layout.css);
+
+
+/* EHPEduGoal */
+.txt_box_none { margin:43px 0 21px 23px; }
+.txt_box_none02 { margin:16px 0 0 23px; }
+.lst_goal { width:717px; margin:26px 0 0 23px; }
+.lst_goal li { padding:20px 0 20px 0; background:url(/images/portal/hpPopUP/common/bg_separator.gif) repeat-x left bottom; vertical-align:top; }
+.lst_goal li img { float:left; margin-right:15px; }
+.lst_goal .last { background:none; }
+.lst_goal .txt_block { display:block; margin-left:31px; }
+
+
+
+.txt_history { margin-top:17px; }
+.history { float:left; margin-top:20px; background:url(/images/portal/hpPopUP/common/bg_history.gif) no-repeat left top; }
+.history .term { float:left; width:200px; height:300px; margin-left:10px; display:inline; vertical-align:top; }
+.history .term img { padding-left:13px; }
+.history .con { float:left; width:500px; margin-left:30px; display:inline; }
+.history .lst_history li { margin-bottom:44px;}
+
+.history .lst_history { width:500px; }
+.history .lst_history .tit_02 { margin:0; font-size:15px; line-height:100%; background:url(/images/portal/hpPopUP/common/bul_tit_02.gif) no-repeat left 3px; vertical-align:top; }
+.history .lst_history .tit_02 strong { font-family:Tahoma; line-height:100%; font-size:15px; vertical-align:top; }
+.history .lst_history p strong { display:inline-block; width:60px; text-align:right; vertical-align:top; }
+.history .lst_history p span { display:inline-block; width:420px; margin-left:20px; vertical-align:top; }
+.history .lst_history p.fist { margin-top:13px; padding-top:13px; background:url(/images/portal/hpPopUP/common/bg_separator.gif) repeat-x left top; }
+.history .lst_history li.last { margin-bottom:0; }
+
+
+/* EHPProfMemIntr */
+.professor { float:left; }
+.professor li { float:left; width:355px; margin-top:50px;  }
+.professor li .photo { float:left; width:105px; height:130px; background:url(/images/portal/hpPopUP/common/bg_photo.gif) no-repeat;} 
+.professor li .photo img { width:93px; height:118px; margin:5px 0 0 5px; }
+.professor li .career { float:left; width:240px; margin-left:10px; }
+.professor li .career .name {}
+.professor li .career .email a { color:#4990d8; text-decoration:underline; }
+.professor li .career .subject { margin-top:12px; }
+.professor li .career .btn_01 { margin-top:12px; }
+.professor li .career .lst_depth1 { width:230px;  margin:12px 0 0 0; }
+.professor li .career .lst_depth1 li {width:230px; margin:0; }
+.professor li .career .lst_hyphen li { margin:0; padding:0; }
+.professor li .career .lst_hyphen li span { display:block; margin-left:10px; }
+.professor li.lst_first { float:left; clear:both; } 
+.professor li.lst_right { margin-left:30px; }
+
+
+
+/* EHPDeptOfrmAstcGdnc */
+.txt_box_guide { width:738px; background:#f4f4f4; border:solid 1px #e5e5e5; vertical-align:top; }
+.txt_box_guide .top_Wrap { background:#fff; padding:9px 0 7px 0; }
+.txt_box_guide .top_Wrap .tit_02 { margin:0 0 0 15px; }
+.txt_box_guide dl { margin:20px 0 20px 27px; background:url(/images/portal/hpPopUP/common/bg_office_Guide.gif) no-repeat 95% top; min-height:260px; }
+.txt_box_guide dt { padding-left:9px; background:url(/images/portal/hpPopUP/common/bul_blue.gif) no-repeat left; font-weight:700; color:#6794e5; }
+.txt_box_guide dd { margin-bottom:13px; padding-left:10px; }
+
+
+/* EHPRcmdSite, EHPStudAbrdInfo */
+.con_info .tit_01 { margin-bottom:19px; }
+.con_info .tit_02 { margin:0 0 0 15px; }
+.con_info .tit_04 { margin-left:28px; }
+.con_info .gap_t { margin-top:60px;}
+.con_info .txt_box01 { margin-left:15px; }
+.con_info .lst_hyphen { margin-left:38px; }
+.con_info .lst_left { float:left; width:350px; }
+.con_info .lst_right { float:left; }
+.con_info .lst_depth1 { margin-left:10px; }
+.con_info .txt_box02 { margin:0 0 10px 0; }
+ /* EHPFaq */
+.lst_qna { width:740px; }
+.lst_qna .con_qna { display:inline-block; width:740px; padding-top:8px; border-top:solid 1px #e5e5e5; }
+.lst_qna a { display:inline-block; cursor:pointer;  }
+.lst_qna .qbtn { padding-left:47px; background:url(/images/portal/hpPopUP/dp33/bg_q.gif) no-repeat 20px 1px;  }
+.lst_qna .qbtn_over { padding-left:47px; background:url(/images/portal/hpPopUP/dp33/bg_q_over.gif) no-repeat 20px 1px;  }
+.lst_qna .con_q {  margin-bottom:7px; }
+.lst_qna .con_a { padding:8px 0 5px 0; background:url(/images/portal/hpPopUP/dp33/bg_a.gif) no-repeat 36px 10px; border-top:solid 1px #e5e5e5; }
+.lst_qna .txt_a { margin-left:60px; }
+.lst_qna .txt_a p { margin-top:10px; }
+.lst_qna .lst_order_qna { margin-left:10px; }
+.lst_qna .last { border-bottom:solid 1px #e5e5e5; }
+
+
+
+/* EHPCertInfo_01 */
+.txt_box_menu { width:730px; padding:11px 0 8px 0; margin:20px 0 0 10px; border-bottom:solid 1px #e5e5e5; background:url(/images/portal/hpPopUp/dp33/bg_cert_menu.gif) no-repeat; }
+.lst_cert li { display:inline; padding:0 15px; font-size:11px; background:url(/images/portal/hpPopUP/dp33/bul_cert_bar.gif) no-repeat left 4px; }
+.lst_cert .first { padding-left:25px; background:none; }
+.btn_top { margin:15px 0; padding-bottom:2px; border-bottom:solid 1px #e9e9e9; text-align:right; }
+.tbe_month {}
+.tbe_month th { padding:0; }
+.tbe_month td { height:35px; }
+.tbe_month .graph { padding:0; background:url(/images/portal/hpPopUP/dp33/bg_month.gif) repeat-x;} 
+.tbe_month td span { display:block; position:relative; height:18px; border:solid 1px #e29765;  background:url(/images/portal/hpPopUP/dp33/bg_month_bar.gif) repeat-x; }
+.tbe_month td span.w1 { width:12px; }
+.tbe_month td span.w3 { width:39px; }
+.tbe_month td span.w4 { width:54px; }
+.tbe_month td span.w5 { width:68px; }
+.tbe_month td span.w8 { width:110px;}
+.tbe_month td span.ml0 { margin-left:0px; }
+.tbe_month td span.ml5 { margin-left:70px; }
+.tbe_month td span.ml14 { margin-left:196px; }
+.tbe_month td span.ml19 { margin-left:266px; }
+.tbe_month td span.ml20 { margin-left:280px; }
+.tbe_month td span.txt { position:absolute; width:100%; border:0 none; background:none; margin:0 auto; text-align:center; }
+.tbe_month td span.indent { text-indent:-6px; white-space:nowrap; }
+
+/* iframe */ 
+.iframeWrap { margin-top:15px; }
+.contents_structure { margin-top:15px; }
+
+
+/* IE 6.0 */
+*html .txt_box_guide dl { height:260px; }
+*html .history .lst_history .tit_02 strong { margin-top:-2px; }
+
+/* detail popup */ 
+/* detail popup */ 
+.detailpopup h1 {border-top:3px solid #1a5d9c;border-bottom:1px solid #1a5d9c; background:#2c84cf url(/images/portal/hp_common/pop_logo.gif) no-repeat 10px 7px; padding:12px 0 0 39px; height:23px; color:#fff; font-weight:bold; font-size:13px; font-family:돋움,dotum; }
+.detailpopup .content {border-bottom:2px solid #007db6; min-height:250px;}
+.detailpopup .btn_m {text-align:center; padding:8px 0 10px;}
+.detailpopup .btn_gry {background:url(/images/portal/hp_common/pop_btn.gif) no-repeat left top; width:56px; height:13px; text-align:center; display:inline-block; color:#333; font-size:11px; font-family:돋움,dotum; text-decoration:none; padding-top:3px;}
+.detailpopup a.btn_gry:hover {color:#;} 

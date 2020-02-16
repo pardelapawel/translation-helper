@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0161)https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=4&year=2020&hakgi=1&hakgwacd=34&gmcd=34272&gsgrade=3&tabno=1&gaeyoFlag=1%27&epTicket=INV -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    	       
+        <title>Korea National Open University-Learning information</title> 
+        <link href="./web_files/table.css" rel="stylesheet" type="text/css">
+        <link href="./web_files/content.css" rel="stylesheet" type="text/css">
+        
+        <!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="/css/css_ie6.css" />
+        <![endif]-->
+        
+    	<script language="javascript">        
+       function initTabMenu(tabContainerID,tabClassName,tabNum) {
+           var tabContainer = document.getElementById(tabContainerID);
+           var tabAnchor = tabContainer.getElementsByTagName("a");
+           var i = 0, tabAnchorIdx = 0;
+
+           for (i = 0; i < tabAnchor.length; i++) {
+               if (tabAnchor.item(i).className == tabClassName)
+                   thismenu = tabAnchor.item(i);
+               else
+                   continue;
+
+               tabAnchorIdx = tabAnchorIdx + 1;
+               thismenu.container = tabContainer;
+               thismenu.targetEl = document.getElementById(tabAnchor.item(i).href.split("#")[1]);
+               thismenu.targetEl.style.display = "none";
+               thismenu.imgEl = thismenu.getElementsByTagName("img").item(0);
+
+               thismenu.onclick = function tabMenuClick() {
+                   currentmenu = this.container.current;
+                   if (currentmenu == this){
+                       return false;
+         			}
+                   if (currentmenu) {
+                       currentmenu.targetEl.style.display = "none";
+                       if (currentmenu.imgEl) {
+                           currentmenu.imgEl.src = currentmenu.imgEl.src.replace("_o.gif", ".gif");
+                           currentmenu.className = currentmenu.className.replace("_over", "");
+                       } else {
+                           currentmenu.className = currentmenu.className.replace("_over", "");
+                       }
+                   }
+                   this.targetEl.style.display = "block";
+                   if (this.imgEl) {
+                       this.imgEl.src = this.imgEl.src.replace(".gif", "_o.gif");
+                       this.className += "_over";
+                   } else {
+                       this.className += "_over";
+                   }
+                   this.container.current = this;
+
+                   return false;
+               };
+
+         if (tabNum == 0){}
+         
+         else if (tabNum != null && tabAnchorIdx == tabNum)
+          thismenu.container.first = thismenu;
+         else if (!thismenu.container.first)
+          thismenu.container.first = thismenu;
+           }
+
+           if (tabContainer.first)
+               tabContainer.first.onclick();
+       }
+       
+       /**
+        * Time 스트링을 자바스크립트 Date 객체로 변환
+        * parameter time: Time 형식의 String
+        */
+       function toTimeObject(time) { //parseTime(time)
+           var year  = time.substr(0,4);
+           var month = time.substr(4,2) - 1; // 1월=0,12월=11
+           var day   = time.substr(6,2);
+           var hour  = time.substr(8,2);
+           var min   = time.substr(10,2);
+           return new Date(year,month,day,hour,min);
+       }
+
+       /**
+        * 특정날짜 무슨 요일이야?
+        */
+       function getDayOfWeek(strtime) {
+           var now = toTimeObject(strtime);
+           var day = now.getDay(); //일요일=0,월요일=1,...,토요일=6
+           var week = new Array('일','월','화','수','목','금','토');
+           return week[day];
+       }
+
+       function profUrl(url) {
+         window.open(url);
+       }
+
+       function closeOut() {
+         this.close() ;
+       }
+       /*
+        * 개요보기
+        */
+       function listSubjectIntro() {
+         var ff = document.subjectIntroForm;
+         ff.gaeyoFlag.value="1";
+         ff.method="post";
+         ff.action="/common/HCDSubjectIntrolistMoLecPlan.do";
+         ff.submit();
+       }
+
+       /*
+        * 강의계획서 보기
+        */
+       function listMoLecPlan() {
+         var ff = document.subjectIntroForm;
+         ff.gaeyoFlag.value="2";
+         ff.method="post";
+         ff.action="/common/HCDSubjectIntro.do";
+         ff.submit();
+       }        
+
+       /** 시험일정조회 */ 
+       function fn_examSclSerach(lesnExamDc){
+    	var ff = document.subjectInfoForm;
+        ff.tabno.value="2";
+   		ff.lesnExamDc.value=lesnExamDc;
+   		ff.method="post";
+        ff.action="/common/HCDSubjectIntrolistMoLecPlan.do";
+        ff.submit();  		
+   	}	
+
+    function fn_resize(){
+    	//this.scrollbars = "auto";
+        window.resizeTo(810,1000);
+        
+    }
+    </script>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="./web_files/translateelement.css"></head>
+    <!-- 사용할 변수 목록  --> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		 
+	
+	
+	
+	
+	    <!-- media 종류 setup -->
+	    
+	    
+	    
+	    
+	    
+	        
+	        
+	    
+	
+	
+	
+	
+	
+	    <!-- media 종류 setup -->
+	    <!-- 강의구분 setup -->
+	    
+	    
+	    
+	        
+	    
+	    
+	    <!-- 강의구분 setup -->
+	    <!-- 시험타입 setup -->
+	    
+	    
+	    
+	        
+	    
+	    <!-- 시험타입 setup -->
+	    <!-- 과목구분 setup -->
+	    
+	    
+	    
+	        
+	    
+	    
+	    
+	    <!-- 과목구분 setup -->
+	
+		
+    <body onload="javascript:fn_resize();" style="overflow:auto; overflow-x:hidden">
+        <!-- contents -->
+        <div id="detailpop" class="detailpopup">
+	        <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Course Information-HTML Web Programming</font></font></h1>
+	    </div>
+        <div id="contents">
+            <div class="subContent">
+                <div id="tab" style="width:100%">
+                    <ul class="tab_lst" style="width:100%">
+                        <li><a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=4&amp;year=2020&amp;hakgi=1&amp;hakgwacd=34&amp;gmcd=34272&amp;gsgrade=3&amp;tabno=1&amp;gaeyoFlag=1%27&amp;epTicket=INV#tab_cert01" class="tabbtn_over"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Subject Outline</font></font></span></a></li>
+                        <li><a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=4&amp;year=2020&amp;hakgi=1&amp;hakgwacd=34&amp;gmcd=34272&amp;gsgrade=3&amp;tabno=1&amp;gaeyoFlag=1%27&amp;epTicket=INV#tab_cert02" class="tabbtn"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Test Information</font></font></span></a></li>
+                    </ul>
+                </div>
+                
+                <div id="tab">    
+                    <!-- tab_cert01 -->
+                    <div id="tab_cert01" style="display: block;">
+                        <h4 id="tab_cert01_01" class="tit_02">
+                            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">summary</font></font></strong>
+                        </h4>
+                        <p class="txt_box02"> 
+                            <span class="bottom">&nbsp;</span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            All web developers must know HTML, CSS, and JavaScript to create web pages. </font><font style="vertical-align: inherit;">In other words, the content of a document can be defined using HTML, how to display the document on the screen can be written using CSS, and JavaScript can be used to create an efficient web page only through a series of collaborations that program the behavior of the web page. </font><font style="vertical-align: inherit;">Therefore, this course introduces HTML, CSS, and JavaScript, and aims to cultivate the basic ability to create various forms of web pages through their use.
+                        </font></font></p>
+                        
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Medium name</font></font></h5>
+	                        <ul class="lst_depth1">
+	                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Multimedia lesson</font></font></li>
+	                        </ul>
+	                        <br>
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Service schedule</font></font></h5>
+	                        
+	                        <ul class="lst_depth1">
+	                            <li>
+		                            
+		                            
+		                        </li>
+		                        <li>
+		                            
+		                        </li>
+		                        
+	                            
+	                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Additional updates every Monday during the semester.</font></font></li>
+	                            
+	                        </ul>
+	                        <br>
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">lecture content</font></font></h5>
+	                        <ul class="lst_depth1">
+	                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Multimedia lesson</font></font></li>
+	                        </ul>
+	                        <!-- 강의가 2/4/5 면 -->
+	                        
+	                            <table class="tbeForm" summary="오디오 강의에 관한 정보입니다.">
+		                            <caption></caption>
+		                            <colgroup>
+		                                <col width="30">
+		                                <col width="165">
+		                                <col width="250">
+		                                <col width="110">
+		                                <col width="50">
+		                            </colgroup>
+		                            <thead>
+		                                <tr>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Count</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecture Topic</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The details</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Textbook Pages</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Professor in charge</font></font></th>
+		                                </tr>
+		                            </thead>
+		                            <tbody>
+		                                
+		                                
+		                                
+		                                    
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">One</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTML overview&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-HTML concepts-Preparation for writing HTML documents-Basics of writing HTML documents&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1-17</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Represent text in HTML&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Annotation and text representation-Character styling-List assignment and content grouping&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19-41</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Representing Pictures and Links in HTML&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Insert Image-Insert Hyperlink&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">43-59</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Represent Tables in HTML&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Basic format-Merging rows and columns and placing elements-Grouping table content and styling by column&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">61-75</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Multimedia representation in HTML&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-audio element-video element&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">77-93</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Input form in HTML&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-form tag-input tag-textarea tag and datalist tag&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">95-129</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSS overview&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-CSS definition format and application method-CSS selectors&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">131-151</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSS Properties (1)&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Color-Font Properties-Text Properties&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">153 ~ 169</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSS Properties (2)&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Text properties-box properties&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">169-192</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CSS Properties (2)&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Background Properties-Border Properties-List Properties and Table Properties&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">193-209</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaScript basics&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Variables and data types-Operators, conditional statements, loops, functions-dialogs&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">211-243</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaScript object&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Objects and events-built-in objects (String, Array, Date, Math, screen objects)&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">245-269</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Document object model&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Accessing DOM elements-modifying DOM elements-inserting and deleting DOM nodes&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">271 ~ 283</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Browser object &amp; jQuery (1)&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Browser object model-jQuery concepts and how to use them-jQuery selectors&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">283-306</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+				                                <tr>
+				                                    <td align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">jQuery (2)&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-Manipulate elements and attributes-Manipulate CSS and edit DOM elements-jQuery effects&nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">306-336</font></font></td>
+				                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lee Kwan-yong</font></font></td>
+				                                </tr>
+			                                
+		                                
+		                            </tbody>
+		                        </table>
+	                        
+	                        <!-- 강의가 2/4/5 면 끝-->
+	                        
+	                        <!-- 강의가 2/4/5 가 아니면 -->
+	                        
+	                        <!-- 강의가 2/4/5 가 아니면 -->
+	                        <br>
+	                        
+                            
+                            
+                            
+                            
+                                  
+                            
+                            
+	                        <ul class="lst_depth1">
+	                            <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Non-Attendance Class</font></font></li>
+	                        </ul>
+	                        
+		                        <table class="tbeForm" summary="출석수업에 관한 정보입니다.">
+		                            <caption></caption>
+		                            <colgroup>
+		                                <col width="25">
+		                                <col width="120">
+		                                <col width="245">
+		                                <col width="60">
+		                                <col width="50">
+		                            </colgroup>
+		                            <thead>
+		                                <tr>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">division</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecture Topic</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The details</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Textbook Pages</font></font></th>
+		                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecture</font></font></th>
+		                                </tr>
+		                            </thead>
+		                            <tbody>
+		                                <tr>
+		                                    
+		                                </tr>
+		                                
+		                                
+		                                    <tr>
+			                                    <td scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">One</font></font></td>
+			                                    <td scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Submit your homework online&nbsp;</font></font></td>
+			                                    <td scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">See later notice&nbsp;</font></font></td>
+			                                    <td scope="col"></td>
+			                                    <td scope="col">
+			                                        
+			                                        
+			                                    </td>
+			                                </tr>
+		                                
+		                                
+		                            </tbody>
+		                        </table>
+		                    
+	                        <br>
+	                        <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluation method and question range</font></font></h5>
+	                        <table class="tbeForm" summary="출석수업에 관한 정보입니다.">
+	                            <caption></caption>
+	                            <colgroup>
+	                                <col width="80">
+	                                <col width="80">
+	                                <col width="245">
+	                                <col width="200">
+	                            </colgroup>
+	                            <thead>
+	                                <tr>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluation Type</font></font></th>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Assessment Methods</font></font></th>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Scope of question</font></font></th>
+	                                    <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remarks</font></font></th>
+	                                </tr>
+	                            </thead>
+	                            <tbody>
+	                                <tr>
+	                                    
+		                                    <td colspan="4" align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">There is no content of registered evaluation method and scope.</font></font></td>
+		                                  
+		                            </tr>
+                                    	                                
+	                            </tbody>
+	                        </table>
+	                        <br>
+	                        <p class="txt_important noGap"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Note: The above information is subject to change, so please refer to the academic bulletin.</font></font></b></p>
+                            <br>
+                            
+                            <h5 class="tit_03"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">references</font></font></h5>
+                            <ul class="lst_depth1">
+                                
+                                 
+                                    <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">[1] http://www.w3.org/TR/html5/ </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">[2] Lee Kwan-yong, “HTML / XML”, Korea Institute of Broadcasting and Communication, 2014</font></font></li>                                        
+                                
+	                        </ul>
+	                   
+                    </div>
+                    <!-- //tab_cert01 --> 
+                    <!-- tab_cert02 : 시험정보는 여기에 코딩 -->
+                    <div id="tab_cert02" style="display: none;">    
+                        <ul class="lst_depth1">
+                            <li>시험일정의 O 를 누르시면 상세 세부 시험일정을 볼 수 있습니다.</li>
+                        </ul>                	
+                    	<table class="tbeForm" summary="시험실시여부">
+				            <caption></caption>
+				            <colgroup>
+				                <col width="">
+				                <col width="">
+				                <col width="">            
+				            </colgroup>
+				            <thead>
+				            	 <tr>
+				            		<th rowspan="2">과목</th>
+				            		<th colspan="3">시험일정</th>
+				            	</tr>
+				                <tr>
+				                    <th scope="col">대체</th>
+				                    <th scope="col">중간</th>
+				                    <th scope="col" class="last">기말</th>
+				                </tr>
+				            </thead>
+				            <tbody>            
+				                <tr align="center">
+				                	<td>HTML 웹프로그래밍</td>
+				                    <td><a href="javascript:fn_examSclSerach(&#39;02&#39;);">X</a></td>
+				                    <td><a href="javascript:fn_examSclSerach(&#39;04&#39;);">X</a></td>
+				                    <td><a href="javascript:fn_examSclSerach(&#39;06&#39;);">X</a></td>
+				                </tr>
+				            </tbody>
+				        </table>
+				        <h4 id="tab_cert02_01" class="tit_02">
+                            <strong>시험일정 - </strong> 
+                        </h4>  
+                    	<table class="tbeForm" summary="시험일정표">
+                    		<caption>시험일정표</caption>
+                    		<colgroup>
+				                <col width="33%">
+				                <col width="34%">
+				                <col width="33%">            
+				            </colgroup>
+				            <thead>
+				                <tr>
+				                    <th scope="col">지역대학</th>
+				                    <th scope="col">시험일정</th>
+				                    <th scope="col" class="last">장소</th>
+				                </tr>
+				            </thead>
+				            <tbody>           
+				            
+				                
+				                
+					                <tr>
+					                    <td colspan="3" align="center">조회된 시험일정이 없습니다.</td>
+					                </tr>
+				                
+				                            
+				            </tbody>
+                    	</table>                    
+                    </div>
+                </div>
+                <!-- //tab_cert02 --> 
+                
+            </div>
+            <br>
+        </div>
+        <div class="btn_m">
+               <center>
+	    	    <a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=4&amp;year=2020&amp;hakgi=1&amp;hakgwacd=34&amp;gmcd=34272&amp;gsgrade=3&amp;tabno=1&amp;gaeyoFlag=1%27&amp;epTicket=INV#" class="btn_gry" onclick="javascript:window.print();"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Print </font></font></a>
+	    	    <a href="https://haksa.knou.ac.kr/common/HCDSubjectIntrolistMoLecPlan.do?css_type=4&amp;year=2020&amp;hakgi=1&amp;hakgwacd=34&amp;gmcd=34272&amp;gsgrade=3&amp;tabno=1&amp;gaeyoFlag=1%27&amp;epTicket=INV#" onclick="self.close();" class="btn_gry"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">close</font></font></a>
+	    	</center>    
+	    </div>
+        <form name="subjectIntroForm">
+		    <input type="hidden" name="year" value="2020">
+		    <input type="hidden" name="hakgi" value="1">
+		    <input type="hidden" name="hakgwacd" value="34">		    
+		    <input type="hidden" name="gmcd" value="34272">
+		    <input type="hidden" name="gsgrade" value="">
+		    <input type="hidden" name="tabno" value="1">
+		    <input type="hidden" name="gaeyoFlag" value="1&#39;">
+		    <input type="hidden" name="css_type" value="4">
+		    <input type="hidden" name="media" value="5">
+		    <input type="hidden" id="lesnExamDc" name="lesnExamDc" class="textbox" value="">		    
+		</form>
+		
+		<form name="subjectInfoForm">
+		    <input type="hidden" name="year" value="2020">
+		    <input type="hidden" name="hakgi" value="1">		    		    
+		    <input type="hidden" name="gmcd" value="34272">
+		    <input type="hidden" name="hakgwacd" value="34">		    
+		    <input type="hidden" name="tabno" value="1">		    
+		    <input type="hidden" name="css_type" value="4">
+		    <input type="hidden" id="lesnExamDc" name="lesnExamDc" class="textbox" value="">		    
+		</form>
+		
+    
+    <script type="text/javascript">
+        initTabMenu("tab","tabbtn",'1');
+    </script> 
+
+<div id="weava-permanent-marker" date="1580649265199"></div><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./web_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div id="weava-ui-wrapper"><div class="weava-drop-area-wrapper"><div class="weava-drop-area"></div>
+<div class="weava-drop-area-text">Drop here!</div></div></div><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
