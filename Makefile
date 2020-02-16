@@ -1,6 +1,6 @@
 
 
-FIRST_PAGE = missingfiles/syllabus_list.pdf
+FIRST_PAGE = coverpage_syllabus.pdf
 COURSES_SORTED = cprog ds la db 6001x_syllabus stat ds101_fine mediapsy SocSoc philethics american medivalthought modernthought Pol101 GlobaInterRel eastasia powerstructure micro IntroEco compconst FutureEurope migration natlsec integeration IntroWestHistory ModernEuroArt ItalianHistory EuroSocCul NewEur frenchart RussianClub WesternCulture CommFren French1 french2 frenchconv1 German1 english2 english1 chinese writing uni lifesci movies swim contart music bible
 #COURSES_SORTED = cprog ds la db 6001x_syllabus stat ds101_fine mediapsy SocSoc philethics american medivalthought modernthought Pol101 GlobaInterRel eastasia
 #COURSES_SORTED = GlobaInterRel eastasia
