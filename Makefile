@@ -63,7 +63,7 @@ graph: Makefile.svg
 
 Makefile.svg: Makefile
 	$(MAKE) clean
-	$(MAKE) -nd all | makefile2graph | perl -ne 'BEGIN{@nodes}if(/(n\d+).*"(pdf|dummy|ready_to_pdf_htmls)"/){push @nodes, $$1;$$regex=join "|", @nodes}print unless(@nodes and /$$regex\b/)' | dot -Tsvg -o $@
+	$(MAKE) -nd all | makefile2graph | perl -ne 'BEGIN{@nodes}if(/(n\d+).*"(pdf|dummy|ready_to_pdf_htmls)"/){push @nodes, $$1;$$regex=join "|", @nodes}print unless(@nodes and /($$regex)\b/)' | dot -Tsvg -Granksep=2 -o $@
 
 
 .PHONY: clean
