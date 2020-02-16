@@ -154,7 +154,7 @@
     "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[4]/td[3]/font/font": "-Stack",
     "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[4]/td[5]/font/font": "lecture",
     "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[2]/font/font": "Stack and queue (2)",
-    "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[3]/font/font": "-Cue-deck",
+    "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[3]/font/font": "-Queue-deck",
     "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[5]/td[5]/font/font": "lecture",
     "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[6]/td[2]/font/font": "Linked List (1)",
     "/html/body/div[2]/div/div[2]/div[1]/table[2]/tbody/tr[6]/td[3]/font/font": "-Nodes and pointers-pointers in C-simple linked list in C",
