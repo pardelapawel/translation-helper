@@ -5,8 +5,10 @@ COURSES_SORTED = cprog ds la db 6001x_syllabus stat ds101_fine mediapsy SocSoc p
 
 all: syllabus.all.pdf
 
+ALL_HTMLS_READY = $(addprefix ready_to_pdf_htmls/, $(filter-out 6001x_syllabus.html, $(COURSES_SORTED:=.html)))
 .PRECIOUS: $(addprefix ready_to_pdf_htmls/, $(COURSES_SORTED:=.html))
-ready: $(addprefix ready_to_pdf_htmls/, $(filter-out 6001x_syllabus.html, $(COURSES_SORTED:=.html)))
+.PHONY: ready
+ready: $(ALL_HTMLS_READY)
 
 define html_prepared_and_json
 ready_to_pdf_htmls/%.html: $(1)/%.prepared.html $(1)/%.json | ready_to_pdf_htmls
@@ -49,7 +51,8 @@ pdf/%.pdf: ready_to_pdf_htmls/%.html | pdf
 	@echo "\e[35m[`basename $*`]\tcreated 	'$@'\e[0m"
 	@echo "\e[35m===========\e[0m"
 
-pdf/6001x_syllabus.pdf:         missingfiles/6001x_syllabus.pdf             ; cp $< $@
+pdf/6001x_syllabus.pdf: missingfiles/6001x_syllabus.pdf
+	cp $< $@
 
 pdf ready_to_pdf_htmls:
 	mkdir -p $@
@@ -64,6 +67,9 @@ Makefile.svg: Makefile
 	$(MAKE) clean
 	$(MAKE) -nd all | makefile2graph | perl -ne 'BEGIN{@nodes}if(/(n\d+).*"(pdf|dummy|ready_to_pdf_htmls)"/){push @nodes, $$1;$$regex=join "|", @nodes}print unless(@nodes and /($$regex)\b/)' | dot -Tsvg -Granksep=2 -o $@
 
+index.html:
+	echo $(ALL_HTMLS_READY) | tr ' ' '\n' | perl -ne 'chomp;print "[`$$_`]($$_)  \n"' | markdown > $@
+	echo $(ALL_HTMLS_READY) | tr ' ' '\n' | perl -ne 'chomp;print "# `$$_`\n <iframe width=\"100%\" height=\"100%\" src=\"./$$_\"></iframe>\n"' | markdown >>$@
 
 .PHONY: clean
 clean:
