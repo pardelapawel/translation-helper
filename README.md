@@ -2,6 +2,8 @@
 
 2 scripts that might help with translation of syllabus.
 
+The result of which is build with github actions and can be seen here: [Github page](https://pardelapawel.github.io/translation-helper/)
+
 # Dependencies
 
 only html parser:
