@@ -86,6 +86,7 @@ make2graph:
 python_dependencies:
 	sudo apt-get install python3-setuptools
 	python3 -m pip install --upgrade pip
+	pip install -r requirements.txt
 	sudo python3 -m pip install -r requirements.txt
 	sudo python3 -m pip install weasyprint
 
