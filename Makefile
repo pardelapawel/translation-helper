@@ -9,7 +9,7 @@ COURSES_SORTED = cprog ds la db 6001x_syllabus stat ds101_fine mediapsy SocSoc p
 
 all: syllabus.all.pdf
 
-ready_to_pdf_htmls/%.html: missingfiles/%.prepared.html missingfiles/%.prepared.nothing.js |ready_to_pdf_htmls
+ready_to_pdf_htmls/%.html: missingfiles/%.prepared.html missingfiles/%.json |ready_to_pdf_htmls
 	python3 apply_mapping.py $^ -o $@ --add_colour
 
 ready_to_pdf_htmls/%.html: missingfiles/checked/%.prepared.html missingfiles/checked/%.json | ready_to_pdf_htmls
