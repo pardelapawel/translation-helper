@@ -15,11 +15,7 @@ jobs:
         python-version: 3.5
     - name: Install python dependencies
       run: |
-        sudo apt-get install python3-setuptools
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        sudo python3 -m pip install weasyprint
-        sudo apt-get install poppler-utils
+          make install_dependencies
     - name: Run script
       run: |
           make clean graph ready index.html all

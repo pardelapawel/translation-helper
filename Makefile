@@ -76,4 +76,18 @@ index.html:
 clean:
 	rm -rf ready_to_pdf_htmls/ pdf/
 
-%: %,v
+.PHONY: install_dependencies make2graph python_dependencies
+install_dependencies: make2graph python_dependencies pdf_dependencies
+
+make2graph:
+	git clone https://github.com/lindenb/makefile2graph.git
+	cd makefile2graph && make && sudo make install
+
+python_dependencies:
+	sudo apt-get install python3-setuptools
+	python3 -m pip install --upgrade pip
+	sudo python3 -m pip install -r requirements.txt
+	sudo python3 -m pip install weasyprint
+
+pdf_dependencies:
+	sudo apt-get install poppler-utils
