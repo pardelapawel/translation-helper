@@ -1,7 +1,7 @@
 [32m[cprog]	creating	'ready_to_pdf_htmls/cprog.html'[0m
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 187 entries
 Saved modified page to 'ready_to_pdf_htmls/cprog.html'
 [32m[cprog]	created 	'ready_to_pdf_htmls/cprog.html'[0m
@@ -20,16 +20,16 @@ Saved modified page to 'ready_to_pdf_htmls/ds.html'
 [35m===========[0m
 [34m[la]	creating	'done/knou/la.prepared.html'[0m
 [32m[la]	creating	'ready_to_pdf_htmls/la.html'[0m
-replacing '중간' with '중간'
-replacing '시험일정 -' with '시험일정 -'
-replacing '선형대수' with '데이터과학입문'
+replacing '시험일정' with '시험일정'
 replacing '조회된 시험일정이 없습니다.' with '조회된 시험일정이 없습니다.'
-replacing '시험일정' with '시험일정'
-replacing '시험일정' with '시험일정'
 replacing '시험일정표' with '시험일정표'
+replacing '선형대수' with '데이터과학입문'
+replacing '시험일정 -' with '시험일정 -'
 replacing '지역대학' with '지역대학'
 replacing '기말' with '기말'
+replacing '시험일정' with '시험일정'
 replacing '대체' with '대체'
+replacing '중간' with '중간'
 replacing '장소' with '장소'
 Modified 135 entries
 Saved modified page to 'ready_to_pdf_htmls/la.html'
@@ -101,8 +101,8 @@ Saved modified page to 'ready_to_pdf_htmls/mediapsy.html'
 [35m===========[0m
 [32m[SocSoc]	creating	'ready_to_pdf_htmls/SocSoc.html'[0m
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 Modified 223 entries
 Saved modified page to 'ready_to_pdf_htmls/SocSoc.html'
 [32m[SocSoc]	created 	'ready_to_pdf_htmls/SocSoc.html'[0m
@@ -111,10 +111,10 @@ Saved modified page to 'ready_to_pdf_htmls/SocSoc.html'
 [35m[SocSoc]	created 	'pdf/SocSoc.pdf'[0m
 [35m===========[0m
 [32m[philethics]	creating	'ready_to_pdf_htmls/philethics.html'[0m
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
-REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'Grades' -> 'Credits'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 Modified 162 entries
 Saved modified page to 'ready_to_pdf_htmls/philethics.html'
 [32m[philethics]	created 	'ready_to_pdf_htmls/philethics.html'[0m
@@ -183,10 +183,10 @@ Saved modified page to 'ready_to_pdf_htmls/american.html'
 [35m[american]	created 	'pdf/american.pdf'[0m
 [35m===========[0m
 [32m[medivalthought]	creating	'ready_to_pdf_htmls/medivalthought.html'[0m
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 443 entries
 Saved modified page to 'ready_to_pdf_htmls/medivalthought.html'
 [32m[medivalthought]	created 	'ready_to_pdf_htmls/medivalthought.html'[0m
@@ -196,8 +196,8 @@ Saved modified page to 'ready_to_pdf_htmls/medivalthought.html'
 [35m===========[0m
 [32m[modernthought]	creating	'ready_to_pdf_htmls/modernthought.html'[0m
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 257 entries
 Saved modified page to 'ready_to_pdf_htmls/modernthought.html'
 [32m[modernthought]	created 	'ready_to_pdf_htmls/modernthought.html'[0m
@@ -246,10 +246,10 @@ Saved modified page to 'ready_to_pdf_htmls/GlobaInterRel.html'
 [35m[GlobaInterRel]	created 	'pdf/GlobaInterRel.pdf'[0m
 [35m===========[0m
 [32m[eastasia]	creating	'ready_to_pdf_htmls/eastasia.html'[0m
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'Grades' -> 'Credits'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 replaced 211 num
 Modified 232 entries
 Saved modified page to 'ready_to_pdf_htmls/eastasia.html'
@@ -360,9 +360,9 @@ Saved modified page to 'ready_to_pdf_htmls/IntroEco.html'
 [35m[IntroEco]	created 	'pdf/IntroEco.pdf'[0m
 [35m===========[0m
 [32m[compconst]	creating	'ready_to_pdf_htmls/compconst.html'[0m
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 Modified 378 entries
 Saved modified page to 'ready_to_pdf_htmls/compconst.html'
 [32m[compconst]	created 	'ready_to_pdf_htmls/compconst.html'[0m
@@ -371,9 +371,9 @@ Saved modified page to 'ready_to_pdf_htmls/compconst.html'
 [35m[compconst]	created 	'pdf/compconst.pdf'[0m
 [35m===========[0m
 [32m[FutureEurope]	creating	'ready_to_pdf_htmls/FutureEurope.html'[0m
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 110 entries
 Saved modified page to 'ready_to_pdf_htmls/FutureEurope.html'
 [32m[FutureEurope]	created 	'ready_to_pdf_htmls/FutureEurope.html'[0m
@@ -383,11 +383,11 @@ Saved modified page to 'ready_to_pdf_htmls/FutureEurope.html'
 [35m===========[0m
 [34m[migration]	creating	'missingfiles/migration.prepared.html'[0m
 [32m[migration]	creating	'ready_to_pdf_htmls/migration.html'[0m
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+replaced 112 num
 REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
-replaced 112 num
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 Modified 275 entries
 Saved modified page to 'ready_to_pdf_htmls/migration.html'
 [32m[migration]	created 	'ready_to_pdf_htmls/migration.html'[0m
@@ -396,10 +396,10 @@ Saved modified page to 'ready_to_pdf_htmls/migration.html'
 [35m[migration]	created 	'pdf/migration.pdf'[0m
 [35m===========[0m
 [32m[natlsec]	creating	'ready_to_pdf_htmls/natlsec.html'[0m
-REPLACING BY VALUE!!! 'Grades' -> 'Credits'
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 Modified 323 entries
 Saved modified page to 'ready_to_pdf_htmls/natlsec.html'
 [32m[natlsec]	created 	'ready_to_pdf_htmls/natlsec.html'[0m
@@ -409,10 +409,10 @@ Saved modified page to 'ready_to_pdf_htmls/natlsec.html'
 [35m===========[0m
 [34m[integeration]	creating	'missingfiles/integeration.prepared.html'[0m
 [32m[integeration]	creating	'ready_to_pdf_htmls/integeration.html'[0m
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 replaced 313 num
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 194 entries
 Saved modified page to 'ready_to_pdf_htmls/integeration.html'
@@ -451,9 +451,9 @@ Saved modified page to 'ready_to_pdf_htmls/IntroWestHistory.html'
 [35m[IntroWestHistory]	created 	'pdf/IntroWestHistory.pdf'[0m
 [35m===========[0m
 [32m[ModernEuroArt]	creating	'ready_to_pdf_htmls/ModernEuroArt.html'[0m
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 160 entries
 Saved modified page to 'ready_to_pdf_htmls/ModernEuroArt.html'
 [32m[ModernEuroArt]	created 	'ready_to_pdf_htmls/ModernEuroArt.html'[0m
@@ -462,9 +462,9 @@ Saved modified page to 'ready_to_pdf_htmls/ModernEuroArt.html'
 [35m[ModernEuroArt]	created 	'pdf/ModernEuroArt.pdf'[0m
 [35m===========[0m
 [32m[ItalianHistory]	creating	'ready_to_pdf_htmls/ItalianHistory.html'[0m
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 Modified 142 entries
 Saved modified page to 'ready_to_pdf_htmls/ItalianHistory.html'
 [32m[ItalianHistory]	created 	'ready_to_pdf_htmls/ItalianHistory.html'[0m
@@ -473,9 +473,9 @@ Saved modified page to 'ready_to_pdf_htmls/ItalianHistory.html'
 [35m[ItalianHistory]	created 	'pdf/ItalianHistory.pdf'[0m
 [35m===========[0m
 [32m[EuroSocCul]	creating	'ready_to_pdf_htmls/EuroSocCul.html'[0m
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 181 entries
 Saved modified page to 'ready_to_pdf_htmls/EuroSocCul.html'
 [32m[EuroSocCul]	created 	'ready_to_pdf_htmls/EuroSocCul.html'[0m
@@ -495,8 +495,8 @@ Saved modified page to 'ready_to_pdf_htmls/NewEur.html'
 [35m[NewEur]	created 	'pdf/NewEur.pdf'[0m
 [35m===========[0m
 [32m[frenchart]	creating	'ready_to_pdf_htmls/frenchart.html'[0m
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 244 entries
 Saved modified page to 'ready_to_pdf_htmls/frenchart.html'
@@ -585,9 +585,9 @@ Saved modified page to 'ready_to_pdf_htmls/WesternCulture.html'
 Translation mapping was saved to 'done/CommFren.json'
 
 [32m[CommFren]	creating	'ready_to_pdf_htmls/CommFren.html'[0m
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'English lesson plan information' -> ''
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 109 entries
 Saved modified page to 'ready_to_pdf_htmls/CommFren.html'
 [32m[CommFren]	created 	'ready_to_pdf_htmls/CommFren.html'[0m
@@ -596,8 +596,8 @@ Saved modified page to 'ready_to_pdf_htmls/CommFren.html'
 [35m[CommFren]	created 	'pdf/CommFren.pdf'[0m
 [35m===========[0m
 [32m[French1]	creating	'ready_to_pdf_htmls/French1.html'[0m
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 172 entries
 Saved modified page to 'ready_to_pdf_htmls/French1.html'
@@ -607,9 +607,9 @@ Saved modified page to 'ready_to_pdf_htmls/French1.html'
 [35m[French1]	created 	'pdf/French1.pdf'[0m
 [35m===========[0m
 [32m[french2]	creating	'ready_to_pdf_htmls/french2.html'[0m
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 202 entries
 Saved modified page to 'ready_to_pdf_htmls/french2.html'
 [32m[french2]	created 	'ready_to_pdf_htmls/french2.html'[0m
@@ -619,8 +619,8 @@ Saved modified page to 'ready_to_pdf_htmls/french2.html'
 [35m===========[0m
 [34m[frenchconv1]	creating	'missingfiles/frenchconv1.prepared.html'[0m
 [32m[frenchconv1]	creating	'ready_to_pdf_htmls/frenchconv1.html'[0m
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 183 entries
@@ -642,10 +642,10 @@ Saved modified page to 'ready_to_pdf_htmls/German1.html'
 [35m===========[0m
 [34m[english2]	creating	'missingfiles/english2.prepared.html'[0m
 [32m[english2]	creating	'ready_to_pdf_htmls/english2.html'[0m
+REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 Modified 284 entries
 Saved modified page to 'ready_to_pdf_htmls/english2.html'
 [32m[english2]	created 	'ready_to_pdf_htmls/english2.html'[0m
@@ -657,8 +657,8 @@ Saved modified page to 'ready_to_pdf_htmls/english2.html'
 [32m[english1]	creating	'ready_to_pdf_htmls/english1.html'[0m
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Grades' -> 'Credits'
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 Modified 338 entries
 Saved modified page to 'ready_to_pdf_htmls/english1.html'
 [32m[english1]	created 	'ready_to_pdf_htmls/english1.html'[0m
@@ -690,8 +690,8 @@ Saved modified page to 'ready_to_pdf_htmls/writing.html'
 [35m===========[0m
 [32m[uni]	creating	'ready_to_pdf_htmls/uni.html'[0m
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 163 entries
 Saved modified page to 'ready_to_pdf_htmls/uni.html'
 [32m[uni]	created 	'ready_to_pdf_htmls/uni.html'[0m
@@ -700,10 +700,10 @@ Saved modified page to 'ready_to_pdf_htmls/uni.html'
 [35m[uni]	created 	'pdf/uni.pdf'[0m
 [35m===========[0m
 [32m[lifesci]	creating	'ready_to_pdf_htmls/lifesci.html'[0m
+REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 170 entries
 Saved modified page to 'ready_to_pdf_htmls/lifesci.html'
 [32m[lifesci]	created 	'ready_to_pdf_htmls/lifesci.html'[0m
@@ -712,8 +712,8 @@ Saved modified page to 'ready_to_pdf_htmls/lifesci.html'
 [35m[lifesci]	created 	'pdf/lifesci.pdf'[0m
 [35m===========[0m
 [32m[movies]	creating	'ready_to_pdf_htmls/movies.html'[0m
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 171 entries
@@ -725,8 +725,8 @@ Saved modified page to 'ready_to_pdf_htmls/movies.html'
 [35m===========[0m
 [32m[swim]	creating	'ready_to_pdf_htmls/swim.html'[0m
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 Modified 147 entries
 Saved modified page to 'ready_to_pdf_htmls/swim.html'
 [32m[swim]	created 	'ready_to_pdf_htmls/swim.html'[0m
@@ -735,9 +735,9 @@ Saved modified page to 'ready_to_pdf_htmls/swim.html'
 [35m[swim]	created 	'pdf/swim.pdf'[0m
 [35m===========[0m
 [32m[contart]	creating	'ready_to_pdf_htmls/contart.html'[0m
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'Grades' -> 'Credits'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 287 entries
 Saved modified page to 'ready_to_pdf_htmls/contart.html'
@@ -747,8 +747,8 @@ Saved modified page to 'ready_to_pdf_htmls/contart.html'
 [35m[contart]	created 	'pdf/contart.pdf'[0m
 [35m===========[0m
 [32m[music]	creating	'ready_to_pdf_htmls/music.html'[0m
-REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
+REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 162 entries
 Saved modified page to 'ready_to_pdf_htmls/music.html'
@@ -758,8 +758,8 @@ Saved modified page to 'ready_to_pdf_htmls/music.html'
 [35m[music]	created 	'pdf/music.pdf'[0m
 [35m===========[0m
 [32m[bible]	creating	'ready_to_pdf_htmls/bible.html'[0m
-REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'English lesson plan information ' -> ''
+REPLACING BY VALUE!!! 'Syllabus in English' -> 'Summary'
 REPLACING BY VALUE!!! 'e-mail and interview time' -> 'e-mail and office hour'
 Modified 310 entries
 Saved modified page to 'ready_to_pdf_htmls/bible.html'
