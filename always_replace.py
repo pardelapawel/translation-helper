@@ -66,7 +66,8 @@ def smart_replace(key, value):
         "Grades": "Credits",
         "English lesson plan information": "",
         "Syllabus in English": "Summary",
-        "e-mail and interview time" : "e-mail and office hour"
+        "e-mail and interview time" : "E-mail and office hour",
+        "lecture room": "Lecture room"
         }
 
     if value.strip() in replace_by_value_dict:
