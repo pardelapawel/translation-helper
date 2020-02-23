@@ -3,6 +3,10 @@ import re
 def smart_replace(key, value):
     if re.match("^one$", value.strip(), re.IGNORECASE):
         return "1"
+    m = re.match("^smoking(?P<num>[0-9]+)$", value.strip(), re.IGNORECASE)
+    if m:
+        print('replaced {} num'.format(m.group("num")))
+        return 'YHH{}'.format(m.group("num"))
 
     gtanslate_footer = ["Google Translate",
         "Original text",
@@ -62,6 +66,7 @@ def smart_replace(key, value):
         "Grades": "Credits",
         "English lesson plan information": "",
         "Syllabus in English": "Summary",
+        "e-mail and interview time" : "e-mail and office hour"
         }
 
     if value.strip() in replace_by_value_dict:
